@@ -9,11 +9,11 @@ import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 # For example, running this (by clicking run or pressing Shift+Enter) will list the files in the input directory
 
 import os
-print(os.listdir("../input"))
+print(os.listdir())
 
 # Any results you write to the current directory are saved as output.
 
-dataset = pd.read_csv("../input/heart.csv")
+dataset = pd.read_csv("heart.csv")
 
 X=dataset.iloc[:,:-1].values  
 y = dataset.iloc[:,-1:].values
@@ -74,4 +74,4 @@ svc = svm.SVC(C=C, gamma=gamma,kernel = 'rbf', random_state = 1,max_iter=1000000
 svc.fit(X_train, y_train)
 score = svc.score(X_test, y_test)
 
-print(score*100)
+print(score*100, '% test accuracy')
