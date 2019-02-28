@@ -8,18 +8,6 @@ bot = ChatBot('Bot',
 trainer=ListTrainer(bot)
 
 for files in os.listdir("./data"):
-      data = open("./data/"+files ,'r').readlines()
-      print(files)
-      trainer.train(data)
-     
-while True:
-    
-    message =input("you:")
-    if message.strip()!='Bye' or message.strip()=='bye':
-        reply=bot.get_response(message)
-        print('Chatbot :',reply)
-    
-    if message.strip()=="Bye" or message.strip()=='bye':
-        print ("Chatbot :Bye")
-        break
-    
+    data = open("./data/"+files ,'r', encoding="utf8").readlines()
+    print(files)
+    trainer.train(data)

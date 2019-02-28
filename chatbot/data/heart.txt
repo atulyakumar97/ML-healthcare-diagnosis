@@ -1,0 +1,11 @@
+heart
+do you smoke?
+yes
+do you smoke?
+no
+how many calories do you eat in a day?
+2000
+how many calories do you eat in a day?
+3000
+how much junk food do you eat?
+do you have chest pain?
