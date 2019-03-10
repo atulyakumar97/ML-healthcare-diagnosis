@@ -51,10 +51,6 @@ while(cap.isOpened()):
         if h > w:
             j = 0 
             cv2.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),2)
-
-
-        if j > 25:
-        	j=0
         
         # write the flipped frame
         out.write(frame)
