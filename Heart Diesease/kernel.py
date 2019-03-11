@@ -75,3 +75,8 @@ svc.fit(X_train, y_train)
 score = svc.score(X_test, y_test)
 
 print(score*100, '% test accuracy')
+
+if svc.predict(X_test[1].reshape(1,-1))==[1]:
+    print("High risk of heart disease")
+else:
+    print("Low risk of Heart disease")
