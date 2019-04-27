@@ -10,11 +10,7 @@ import numpy as np
 import cv2
 import time
 
-
-fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.avi',fourcc, 20.0, (640,480))
-
-video = video.Video()
+video = video.Video('fall1.mp4')
 time.sleep(1.0) # let camera autofocus + autosaturation settle
 video.nextFrame()
 video.testBackgroundFrame()
@@ -29,8 +25,3 @@ while 1:
 	if video.testDestroy():
 		sys.exit()
 
-
-# Release everything if job is finished
-#video.release()
-#out.release()  #save video
-#cv2.destroyAllWindows()
